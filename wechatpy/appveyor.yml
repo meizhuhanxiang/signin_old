@@ -1,0 +1,35 @@
+build: false
+environment:
+  matrix:
+    - PYTHON: "C:/Python27"
+      TESTENV: "py27-cryptography"
+    - PYTHON: "C:/Python27"
+      TESTENV: "py27-pycrypto"
+    - PYTHON: "C:/Python27-x64"
+      TESTENV: "py27-cryptography"
+    - PYTHON: "C:/Python27-x64"
+      TESTENV: "py27-pycrypto"
+    - PYTHON: "C:/Python34"
+      TESTENV: "py34-cryptography"
+    - PYTHON: "C:/Python34"
+      TESTENV: "py34-pycrypto"
+    - PYTHON: "C:/Python35"
+      TESTENV: "py35-cryptography"
+    - PYTHON: "C:/Python35"
+      TESTENV: "py35-pycrypto"
+init:
+  - "ECHO %PYTHON%"
+  - ps: "ls C:/Python*"
+install:
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "python --version"
+  - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
+  # Install the Redis
+  - nuget install redis-64 -excludeversion
+  - redis-64\tools\redis-server.exe --service-install
+  - redis-64\tools\redis-server.exe --service-start
+  - '@ECHO Redis Started'
+  - C:\Python27\python -m pip install tox
+
+test_script:
+  - C:\Python27\python -m tox -c tox-win.ini -e %TESTENV%

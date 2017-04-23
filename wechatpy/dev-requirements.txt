@@ -1,0 +1,10 @@
+-r requirements.txt
+pytest
+pytest-cov
+httmock
+coverage
+redis
+pymemcache
+shove
+cryptography
+pycrypto
