@@ -3,11 +3,6 @@
 import json
 from handler.base.base_handler import BaseHandler, handler
 import uuid
-from model import OrderModel
-from model import AddressModel
-from model import CommodityModel
-from model import OptionModel
-from model import AttributeModel
 import utils.config
 from utils.exception import *
 from wechatpy.pay import WeChatPay
