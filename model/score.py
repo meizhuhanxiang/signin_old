@@ -18,8 +18,8 @@ from model.base import *
 __author__ = 'guoguangchuan'
 
 
-class UserModel(Base):
-    __tablename__ = 'user'
+class ScoreModel(Base):
+    __tablename__ = 'scroe'
 
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, nullable=False)

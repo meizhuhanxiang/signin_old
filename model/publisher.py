@@ -18,8 +18,8 @@ from model.base import *
 __author__ = 'guoguangchuan'
 
 
-class UserModel(Base):
-    __tablename__ = 'user'
+class PublisherModel(Base):
+    __tablename__ = 'publisher'
 
     id = Column(Integer, primary_key=True)
     name = Column(String(30), nullable=False, server_default=text("''"), doc="发布方名称")

@@ -18,8 +18,8 @@ from model.base import *
 __author__ = 'guoguangchuan'
 
 
-class PublisherModel(Base):
-    __tablename__ = 'publisher'
+class AdminModel(Base):
+    __tablename__ = 'admin'
 
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, nullable=False)
