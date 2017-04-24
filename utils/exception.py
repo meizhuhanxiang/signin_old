@@ -46,13 +46,7 @@ class ServerError(BaseError):
     BASE_CODE = 30000
     ARGS_MISSING = (1, '{args} are required.', '缺少参数{args}')
     ARGS_ILLEGAL = (2, 'arguments illegal or not complete', '参数不合法或者不完整')
-    ADDRESS_ID_NO_EXIST = (3, 'address_id: {args} is not exist', '地址id:{args} 不存在')
-    ORDER_ID_ILLEGEL = (4, 'order_id: {args} is illegel', '订单id:{args} 不合法')
-    USER_NO_LOGIN = (5, 'user is not logined', '用户未登陆')
-    CART_ADD_IDS_NOT_MATCH = (6, 'cart add ids is not match', '添加购物车提供的id不合法')
-    ORDER_STATUS_ILLEGAL = (7, 'order status {args} is not illegal', '订单查询状态参数"{args}"不存在或不合法')
-    USER_NOT_V = (8, 'user is not vip', '该用户不是大V')
-    RECOMMEND_TOO_MANY = (8, 'user recommend too many', '该用户评论数太多, 不能超过5条')
+    USER_ID_NO_EXIST = (3, 'user_id: {args} is not exist', '用户user_id:{args} 不存在')
 
 
 class SyncError(BaseError):
