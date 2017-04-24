@@ -31,7 +31,6 @@ class UserModel(Base):
     profile = Column(String(150), nullable=False, server_default=text("''"))
     privilege = Column(List, nullable=False, server_default=text("''"))
     union_id = Column(String(30), nullable=False, server_default=text("''"))
-    is_v = Column(Integer, nullable=False, server_default=text("'0'"))
     name = Column(String(16), nullable=True)
     job = Column(String(30), nullable=True)
     company = Column(String(30), nullable=True)
