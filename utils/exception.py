@@ -47,7 +47,8 @@ class ServerError(BaseError):
     ARGS_MISSING = (1, '{args} are required.', '缺少参数{args}')
     ARGS_ILLEGAL = (2, 'arguments illegal or not complete', '参数不合法或者不完整')
     USER_ID_NO_EXIST = (3, 'user_id: {args} is not exist', '用户user_id:{args} 不存在')
-
+    USER_NO_LOGIN = (4, 'user is not logined', '用户未登陆')
+    USER_EXIST = (5, 'user name: {args} is already exist', '用户name:{args} 已存在')
 
 class SyncError(BaseError):
     BASE_CODE = 40000
