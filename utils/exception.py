@@ -49,7 +49,7 @@ class ServerError(BaseError):
     USER_ID_NO_EXIST = (3, 'user_id: {args} is not exist', '用户user_id:{args} 不存在')
     USER_NO_LOGIN = (4, 'user is not logined', '用户未登陆')
     USER_EXIST = (5, 'user name: {args} is already exist', '用户name:{args} 已存在')
-    PUBLISHER_NOT_EXIST = (6, 'publisher: {args} is not exist', '发布方: {args} 不存在')
+    NOT_EXIST = (6, '{args} is not exist', '{args} 不存在')
 
 class SyncError(BaseError):
     BASE_CODE = 40000

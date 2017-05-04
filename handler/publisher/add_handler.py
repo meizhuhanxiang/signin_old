@@ -24,6 +24,6 @@ class AddHandler(BaseHandler):
             raise ServerError(ServerError.USER_EXIST, args=name)
 
         publisher = PublisherModel(name=name, brief_introduction=brief_introduction, logo=logo, address=address,
-                                   is_del='0', create_time=current_time, update_time=current_time)
+                                   is_del=False, create_time=current_time, update_time=current_time)
         self.model_config.add(publisher)
         return {'publisher_id': publisher.id}

@@ -23,6 +23,7 @@ class ActivityModel(Base):
 
     id = Column(Integer, primary_key=True)
     admin_id = Column(Integer, nullable=False)
+    time = Column(TIMESTAMP, nullable=False, server_default=text("CURRENT_TIMESTAMP"), doc="活动时间")
     content = Column(String(30), nullable=False, server_default=text("''"), doc="活动内容")
     place = Column(String(30), nullable=False, server_default=text("''"), doc="活动地址")
     is_del = Column(BOOLEAN, nullable=False, server_default='0', doc="逻辑删除, true(删除)|false(未删除)")
